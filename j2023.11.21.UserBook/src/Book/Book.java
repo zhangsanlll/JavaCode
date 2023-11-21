@@ -1,0 +1,65 @@
+package Book;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Description:
+ * User: lenovo
+ * Date: 2023-11-21
+ * Time: 20:43
+ */
+public class Book {
+    private String name;
+    private String author;
+
+    private int price;
+    private  String type;
+    private boolean isBorrowed;
+
+    public Book(String name, String author,  int price,String type) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.type = type;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
+    }
+}
