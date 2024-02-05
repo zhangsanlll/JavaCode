@@ -27,6 +27,18 @@ public class Book {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                ", type='" + type + '\'' +
+                ((isBorrowed == true) ? "已借出":"未借出")+
+               // ", isBorrowed=" + isBorrowed +
+                '}';
+    }
+
     public void setName(String name) {
         this.name = name;
     }
