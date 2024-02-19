@@ -14,6 +14,8 @@ import java.util.Scanner;
  */
 public class Main {
     //登录
+
+    //向上转型
    public static User login(){
        Scanner scanner = new Scanner(System.in);
        System.out.println("请输入你的姓名：");

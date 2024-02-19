@@ -18,8 +18,9 @@ public class ShowOperation implements IOperation{
         for (int i = 0; i < currentSize; i++) {
             Book book = bookList.getBook(i);
                 System.out.println(book);
-                return;
+
             }
+        return;
         }
     }
 
