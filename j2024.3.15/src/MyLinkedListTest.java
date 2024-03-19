@@ -14,5 +14,12 @@ public class MyLinkedListTest {
     myLinkedList.addLast(11);
     myLinkedList.addLast(55);
     myLinkedList.display();
+    MyLinkedList myLinkedList2 = new MyLinkedList();
+    myLinkedList2.addLast(1);
+    myLinkedList2.addLast(2);
+    myLinkedList2.addLast(3);
+    myLinkedList2.addLast(1);
+    myLinkedList2.addLast(5);
+    myLinkedList2.display();
     }
 }
