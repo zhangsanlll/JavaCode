@@ -6,4 +6,5 @@
  * Time: 10:50
  */
 public class TestMyQueue {
+
 }
