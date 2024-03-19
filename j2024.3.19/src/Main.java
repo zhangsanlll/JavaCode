@@ -7,20 +7,19 @@
  */
 public class Main {
 
-    static class ListNode{
+    class ListNode{
         public int val;
-        public ListNode prev;
         public ListNode next;
 
-        public ListNode(int val) {
+        public ListNode(int val){
             this.val = val;
         }
-
     }
-    public static ListNode head ;
-    public static ListNode last ;
 
-    public void addLast(int data){
+    public ListNode head;//指向头节点
+
+
+    /*public void addLast(int data){
         ListNode node = new ListNode(data);
 
         //如果链表中一个节点都没有的话
@@ -34,8 +33,47 @@ public class Main {
         node.prev = this.last;
         this.last = node;//last = last.next;
 
+    }*/
+    //尾插法
+    public void addLast(int data){
+        ListNode node = new ListNode(data);
+        int length = size();
+        ListNode temp = head;
+        if(head ==null){
+            head = node;
+            // head.next = node;
+            //必须要有return，否则代码会继续运行下去，导致出错
+            return;
+        }
+
+        //找到最后一个节点
+          /*  for(int i = 1; i< length; i++){
+                temp = temp.next;
+            }*/
+        //或者这种方法
+        while(temp.next != null){
+            temp = temp.next;
+
+        }
+        temp.next = node;
+
     }
 
+    //得到单链表的长度
+    public int size(){
+        ListNode temp = head;
+        int count = 0;
+          /*  //先判空
+            if(temp ==null){
+                return -1;
+            }
+*/
+        while(temp != null){
+            count ++;
+            temp = temp.next;
+        }
+        return count;
+    }
     public void display(){
         ListNode tmp = head;
         while(tmp != null){

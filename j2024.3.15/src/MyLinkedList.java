@@ -6,6 +6,7 @@
  * Time: 19:16
  */
 public class MyLinkedList {
+    //无头双向链表
     static class ListNode{
         public int val;
         public ListNode prev;
@@ -97,5 +98,15 @@ public class MyLinkedList {
         }
         System.out.println();
     }
-    public void clear(){}
+    public void clear(){
+        ListNode cur = head;
+        while(cur != null){
+            ListNode curNext = cur.next;
+            cur.prev = null;
+            cur.next = null;
+            cur = cur.next;
+        }
+        head = null;
+        last = null;
+    }
 }
